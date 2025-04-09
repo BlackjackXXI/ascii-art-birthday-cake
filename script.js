@@ -55,7 +55,7 @@ const wish = `
 
 const output = document.getElementById('ascii-output');
 
-function printWithDelay(text, delay = 1000) {
+function printWithDelay(text, delay = 100) {
   const lines = text.trim().split('\n');
   let i = 0;
   const interval = setInterval(() => {
@@ -64,5 +64,5 @@ function printWithDelay(text, delay = 1000) {
   }, delay);
 }
 
-printWithDelay(cake, 1000);
-setTimeout(() => printWithDelay(wish, 50), cake.split('\n').length * 50 + 500);
+printWithDelay(cake, 100);
+setTimeout(() => printWithDelay(wish, 50), cake.split('\n').length * 100 + 500);
