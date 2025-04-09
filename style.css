@@ -1,9 +1,28 @@
 body {
+  margin: 0;
   background-color: #000;
   color: #0f0;
   font-family: monospace;
   font-size: 14px;
   padding: 20px;
-  white-space: pre; /* ensures ASCII stays aligned */
+  white-space: pre;         /* keep ASCII formatting */
+  overflow-x: auto;         /* prevent horizontal overflow */
+  box-sizing: border-box;
+}
+
+#ascii-output {
+  width: 100%;
   overflow-x: auto;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;        /* smaller font for narrow screens */
+    padding: 10px;
+  }
+
+  #ascii-output {
+    font-size: 12px;
+  }
 }
