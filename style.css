@@ -14,8 +14,8 @@ body {
 }
 
 #ascii-output {
-  font-size: 2.2vw; /* responsive font size for ASCII */
-  white-space: pre-wrap; /* allows line wrapping */
+  font-size: 2.2vw;
+  white-space: pre-wrap;
   text-align: left;
   width: 100%;
   max-width: 100%;
@@ -27,7 +27,7 @@ body {
   padding: 15px 30px;
   border: none;
   border-radius: 12px;
-  margin-top: 20vh;
+  margin-top: 30vh;
   background-color: #ff69b4;
   color: white;
   cursor: pointer;
@@ -36,7 +36,7 @@ body {
 
 @media (max-width: 600px) {
   #ascii-output {
-    font-size: 3vw; /* scale further for portrait phones */
+    font-size: 3vw;
   }
 
   #surprise-btn {
