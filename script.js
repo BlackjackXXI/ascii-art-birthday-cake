@@ -53,6 +53,9 @@ const wish = `
                     |__/      |__/       \\______/                                                                        \\______/
 `;
 
+const cake = `...`;  // Your cake ASCII here
+const wish = `...`;  // Your birthday wish ASCII here
+
 const button = document.getElementById('surprise-btn');
 const ascii = document.getElementById('ascii-output');
 const music = document.getElementById('bday-music');
@@ -70,10 +73,8 @@ button.addEventListener('click', () => {
   button.style.display = 'none';
   ascii.style.display = 'block';
 
-  // play music
-  music.play().catch(() => console.warn('Music playback blocked. Tap interaction needed.'));
+  music.play().catch(() => console.warn('Autoplay blocked'));
   
-  // start ASCII
   printWithDelay(cake, 40);
   setTimeout(() => printWithDelay(wish, 40), cake.split('\n').length * 40 + 500);
 });
