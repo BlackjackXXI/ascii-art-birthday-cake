@@ -1,4 +1,5 @@
 const cake = `
+
            _..._  ,s$$$s.
          .$$$$$$$s$$ss$$$$,
          $$$sss$$$$s$$$$$$$
@@ -52,7 +53,7 @@ const wish = `
 
 const output = document.getElementById('ascii-output');
 
-function printWithDelay(text, delay = 50) {
+function printWithDelay(text, delay = 100) {
   const lines = text.trim().split('\n');
   let i = 0;
   const interval = setInterval(() => {
