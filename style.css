@@ -3,23 +3,19 @@ body {
   background-color: #000;
   color: #0f0;
   font-family: monospace;
-  padding: 1rem;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  box-sizing: border-box;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 #ascii-output {
-  font-size: 2.2vw;
-  white-space: pre-wrap;
-  text-align: left;
-  width: 100%;
-  max-width: 100%;
-  word-wrap: break-word;
+  font-size: 2.5vw; /* scalable to screen width */
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100vw;
+  display: block;
 }
 
 #surprise-btn {
