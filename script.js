@@ -1,6 +1,5 @@
 const cake = `
-
-.          _..._  ,s$$$s.
+           _..._  ,s$$$s.
          .$$$$$$$s$$ss$$$$,
          $$$sss$$$$s$$$$$$$
          $$ss$$$$$$$$$$$$$$                                   (             )
@@ -34,7 +33,7 @@ const cake = `
                                                                    %%%
                                                                   %%%%%
                                                                .,%%%%%%%,.
-                                                          ,%%%%%%%%%%%%%%%%%%%, 
+                                                          ,%%%%%%%%%%%%%%%%%%%,
 
 .
 `;
@@ -53,9 +52,6 @@ const wish = `
                     |__/      |__/       \\______/                                                                        \\______/
 `;
 
-const cake = `...`;  // Your cake ASCII here
-const wish = `...`;  // Your birthday wish ASCII here
-
 const button = document.getElementById('surprise-btn');
 const ascii = document.getElementById('ascii-output');
 const music = document.getElementById('bday-music');
@@ -70,11 +66,12 @@ function printWithDelay(text, delay = 50) {
 }
 
 button.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' }); // Fix for not seeing the ASCII
   button.style.display = 'none';
   ascii.style.display = 'block';
 
-  music.play().catch(() => console.warn('Autoplay blocked'));
-  
+  music.play().catch(() => console.warn('Music autoplay blocked'));
+
   printWithDelay(cake, 40);
   setTimeout(() => printWithDelay(wish, 40), cake.split('\n').length * 40 + 500);
 });
