@@ -65,4 +65,4 @@ function printWithDelay(text, delay = 100) {
 }
 
 printWithDelay(cake, 100);
-setTimeout(() => printWithDelay(wish, 50), cake.split('\n').length * 100 + 500);
+setTimeout(() => printWithDelay(wish, 100), cake.split('\n').length * 100 + 500);
