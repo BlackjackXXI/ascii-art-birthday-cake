@@ -53,16 +53,27 @@ const wish = `
                     |__/      |__/       \\______/                                                                        \\______/
 `;
 
-const output = document.getElementById('ascii-output');
+const button = document.getElementById('surprise-btn');
+const ascii = document.getElementById('ascii-output');
+const music = document.getElementById('bday-music');
 
-function printWithDelay(text, delay = 100) {
+function printWithDelay(text, delay = 50) {
   const lines = text.trim().split('\n');
   let i = 0;
   const interval = setInterval(() => {
     if (i >= lines.length) return clearInterval(interval);
-    output.textContent += lines[i++] + '\n';
+    ascii.textContent += lines[i++] + '\n';
   }, delay);
 }
 
-printWithDelay(cake, 100);
-setTimeout(() => printWithDelay(wish, 100), cake.split('\n').length * 100 + 500);
+button.addEventListener('click', () => {
+  button.style.display = 'none';
+  ascii.style.display = 'block';
+
+  // play music
+  music.play().catch(() => console.warn('Music playback blocked. Tap interaction needed.'));
+  
+  // start ASCII
+  printWithDelay(cake, 40);
+  setTimeout(() => printWithDelay(wish, 40), cake.split('\n').length * 40 + 500);
+});
