@@ -3,7 +3,7 @@ const cake = `
          .$$$$$$$s$$ss$$$$,
          $$$sss HAPPY $$$$$
          $$ss BIRTHDAY $$$$ 
-         '$$$$ Melina $$$$' 
+         '$$$$ Cathyy $$$$' 
           '$$$$$$$$$$$$$$'
             S$$$$$$$$$$$'
              '$$$$$$$$$'
@@ -107,3 +107,4 @@ button.addEventListener('click', () => {
   printWithDelay(cake, 40);
   setTimeout(() => printWithDelay(wish, 40), cake.split('\n').length * 40 + 500);
 });
+
